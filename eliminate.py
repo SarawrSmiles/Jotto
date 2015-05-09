@@ -8,8 +8,12 @@ for word in list1:
     if len(word) == 5:
         list2.append(word)
 
-f = open('fiveLetterWords.txt', 'w')
+f = open('fiveLetterWords.js', 'w')
 
+f.write('var wordBank = [')
 for word in list2:
-    f.write(word + '\n')
+    f.write(word + ',')
+f.write(']');
+
+
 
