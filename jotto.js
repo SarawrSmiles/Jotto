@@ -5,6 +5,7 @@ var $inputField     = $('input');
 var $congratsScreen = $('.congrats');
 var $winningWord    = $('.winning-word');
 var $resetButton    = $('.again');
+var $rules          = $('.rules');
 
 var wordToGuess = '';
 var toggle1Letters = [];
@@ -23,9 +24,19 @@ $resetButton.click(function() {
     wordToGuess = computerChoosesWord();
 });
 
+$rules.click(function() {
+    var $individualRules = $('.rules p');
+    if ($individualRules.css('display') !== 'none' ) {
+        $individualRules.hide();
+    }
+    else {
+        $individualRules.show();
+    }
+});
+
 $inputField.bind('keypress', function(event) {
     if (event.which === ENTER_KEY) {
-        if ($congratsScreen.css('display') == 'none' ) {
+        if ($congratsScreen.css('display') === 'none' ) {
             $guessButton.click();
         }
         else {
