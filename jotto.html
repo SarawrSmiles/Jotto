@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='jotto.css'>
+        <script src='fiveLetterWords.js'></script>
+        <script src='constants.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class='game-board'>
+            <div class='guessed-words-container'>
+                <div class='guessed-words'></div>
+            </div>
+            <div class='user-fields'>
+                <input type='text' maxlength=5>
+                <button class='guess-button'>guess</button>
+            </div>
+        </div>
+        <div class='letter-bank'>
+            <p>Letter bank:</p>
+        </div>
+        <div class='congrats'>
+            <p>You win!</p>
+            <p class='winning-word'></p>
+            <button class='again'>Play again?</button>
+        </div>
+        <script src='jotto.js'></script>
+    </body>
+</html>

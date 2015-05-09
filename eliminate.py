@@ -12,8 +12,8 @@ f = open('fiveLetterWords.js', 'w')
 
 f.write('var wordBank = [')
 for word in list2:
-    f.write(word + ',')
-f.write(']');
+    f.write('\'' + word + '\'' + ', ')
+f.write('];');
 
 
 
