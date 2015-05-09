@@ -8,6 +8,7 @@ body {
 .rules {
     bottom:   20px;
     color:    coral;
+    cursor:   pointer;
     left:     20px;
     position: absolute;
     width:    350px;
