@@ -24,6 +24,7 @@ $resetButton.click(function() {
     $congratsScreen.hide();
 
     numWordsGuessed = 0;
+    $numWordsGuessedDiv.html('0');
     wordToGuess = computerChoosesWord();
 });
 
@@ -49,7 +50,7 @@ $inputField.bind('keypress', function(event) {
 });
 
 function incrementNumWords() {
-   $numWordsGuessedDiv.html(++numWordsGuessed);
+    $numWordsGuessedDiv.html(++numWordsGuessed);
 }
 
 function generateLetterDiv(asciiLetter) {
