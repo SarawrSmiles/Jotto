@@ -37,10 +37,11 @@ body {
 }
 
 .guessed-words {
-    bottom:   0;
-    max-height:   100%;
-    overflow: scroll;
-    position: absolute;
+    bottom:     0;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position:   absolute;
 }
 
 .letter {
