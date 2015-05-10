@@ -1,15 +1,17 @@
-var $guessedWords   = $('.guessed-words');
-var $letterBank     = $('.letter-bank');
-var $guessButton    = $('.guess-button');
-var $inputField     = $('input');
-var $congratsScreen = $('.congrats');
-var $winningWord    = $('.winning-word');
-var $resetButton    = $('.again');
-var $rules          = $('.rules');
+var $congratsScreen     = $('.congrats');
+var $guessButton        = $('.guess-button');
+var $guessedWords       = $('.guessed-words');
+var $inputField         = $('input');
+var $letterBank         = $('.letter-bank');
+var $resetButton        = $('.again');
+var $rules              = $('.rules');
+var $winningWord        = $('.winning-word');
+var $numWordsGuessedDiv = $('.number-of-words-guessed');
 
-var wordToGuess = '';
+var numWordsGuessed = 0;
 var toggle1Letters = [];
 var toggle2Letters = [];
+var wordToGuess = '';
 
 $resetButton.click(function() {
     $inputField.val('');
@@ -21,6 +23,7 @@ $resetButton.click(function() {
     $guessedWords.html('');
     $congratsScreen.hide();
 
+    numWordsGuessed = 0;
     wordToGuess = computerChoosesWord();
 });
 
@@ -44,6 +47,10 @@ $inputField.bind('keypress', function(event) {
         }
     }
 });
+
+function incrementNumWords() {
+   $numWordsGuessedDiv.html(++numWordsGuessed);
+}
 
 function generateLetterDiv(asciiLetter) {
     var $letterDiv = $('<div>');
@@ -128,6 +135,8 @@ $guessButton.click(function() {
         $inputField.select();
 
         $guessedWords.scrollTop(parseInt($guessedWords.css("height")));
+
+        incrementNumWords();
     }
     else {
         $inputField.select();

@@ -96,6 +96,18 @@ body {
     margin-left: 20px;
 }
 
+.number-of-words-guessed-container {
+    color:     cadetblue;
+    font-size: 20px;
+    left:      5px;
+    position:  fixed;
+    top:       5px;
+}
+
+.number-of-words-guessed-container p {
+    display: inline-block;
+}
+
 .congrats {
     background: rgba(100, 200, 100, .8);
     color:      white;
@@ -104,9 +116,9 @@ body {
     height:     100%;
     left:       0px;
     position:   fixed;
-    width:      100%;
     text-align: center;
     top:        0px;
+    width:      100%;
 }
 
 .congrats p {
@@ -119,8 +131,8 @@ body {
     letter-spacing: .15em;
     margin:         auto;
     padding-bottom: 10px;
-    width:          742px;
     text-align:     center;
+    width:          742px;
 }
 
 .congrats button {
