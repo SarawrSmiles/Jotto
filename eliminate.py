@@ -1,4 +1,4 @@
-with open('list-of-words.txt', 'r') as f:
+with open('fiveLetterWords.txt', 'r') as f:
     list1 = f.readlines()
 
 list2 = []
