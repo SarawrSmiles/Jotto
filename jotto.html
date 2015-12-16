@@ -1,17 +1,17 @@
 <html>
     <head>
-        <link rel='stylesheet' type='text/css' href='jotto.css'>
+        <link rel='stylesheet' type='text/css' href='jotto2.css'>
         <script src='fiveLetterWords.js'></script>
         <script src='constants.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
-        <div class='number-of-words-guessed-container'>
-            <p>Number of words guessed: </p>
-            <p class='number-of-words-guessed'>0</p>
+        <div class='main-menu'>
+            <h1>Jotto</h1>
+            <button class='button'>Rules</button>
+            <button class='button'>Play</button>
         </div>
-        <div class='Rules'>
-            <h1>Rules</h1>
+        <div class='rules'>
             <p>The object of the game is to guess the computer's secret word.</p>
             <p>The secret word is 5 letters and each letter is unique.</p>
             <p>Start by guessing any 5 letter word.</p>
@@ -36,6 +36,10 @@
             <p>You win!</p>
             <p class='winning-word'></p>
             <button class='again'>Play again?</button>
+        </div>
+        <div class='number-of-words-guessed-container'>
+            <p>Number of words guessed: </p>
+            <p class='number-of-words-guessed'>0</p>
         </div>
         <script src='jotto.js'></script>
     </body>
